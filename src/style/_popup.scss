@@ -1,0 +1,48 @@
+
+.popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: rgba(#000, .4);
+  text-align: center;
+  display: none;
+}
+
+.popup_modal {
+  margin: 40px auto;
+  position: relative;
+  width: 600px;
+  background-color: #FDFDFD;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.2em;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 10px;
+  overflow: hidden;
+  background-image: url('~@img/ellips popup.png');
+  background-position: -296px -294px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  img {
+    height: 70px;
+    width: auto;
+    margin-top: 20px
+  }
+  p {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px 15px;
+    margin: 0;
+  }
+  a {
+    color: #1A97D7;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+      text-shadow: 0 0 4px #1A97D7;
+    }
+  }
+}

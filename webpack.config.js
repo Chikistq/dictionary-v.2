@@ -1,5 +1,5 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
@@ -23,6 +23,7 @@ module.exports = {
     alias: {
       '@': path.resolve(__dirname, 'src'),
       '@core': path.resolve(__dirname, 'src/core'),
+      '@img': path.resolve(__dirname, 'src/static/img'),
     }
   },
   target: isDev ? 'web' : 'browserslist',
@@ -35,6 +36,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
+      filename: './index.html',
       template: './index.html',
       inject: 'body',
       minify: {
@@ -59,6 +61,20 @@ module.exports = {
           'css-loader',
           'sass-loader',
         ],
+      },
+      {
+        test: /\.(jpg|png|jpeg|gif)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'img/[name][ext][query]'
+        }
+      },
+      {
+        test: /\.(svg)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'icon/[name][ext][query]'
+        }
       },
       {
         test: /\.m?js$/,

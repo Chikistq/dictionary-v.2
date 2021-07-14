@@ -1,7 +1,65 @@
 @import "media";
+@import "header";
+@import "content";
+@import "footer";
 @import "vars";
+@import "popup";
+@import "bootstrap-grid.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
+
+::placeholder {
+  color: #666;
+}
+*::-webkit-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+*:-moz-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+*::-moz-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+*:-ms-input-placeholder {
+  color: #666;
+  opacity: 1;
+}
+
+::selection {
+  background-color: $prim-color;
+  color: #fff;
+}
 
 body {
-  color: blue;
+  font-size: 1em;
+  font-weight: 400;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.75;
+  font-family: 'Roboto', sans-serif;
+  opacity: 1;
+  overflow-x: hidden;
+  margin: 0;
+  color: #141414;
+  min-height: 100vh;
+
+  //bg x3
+
+  background-image: url('~@img/ellips top blue.png'), url('~@img/Elips red.png'), url('~@img/ellips bot blue.png');
+  background-size: auto, auto, auto;
+  background-repeat: no-repeat;
+  background-position: 100% 0, 20% 200px, 40% 100%;
+}
+#app {
+  position: relative;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
 }

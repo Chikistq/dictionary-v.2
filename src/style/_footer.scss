@@ -1,0 +1,44 @@
+footer {
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  color: #5F6368;
+  display: block;
+  position: relative;
+  background-color: rgba(#DFDFDF, .2);
+  border-top: solid rgba(#000, .2) 1px;
+
+  p {
+    margin: 30px 0 5px 0;
+    line-height: 19px;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease-in-out;
+    a {
+      color: #1A97D7;
+      text-decoration: none;
+      cursor: pointer;
+      &:hover {
+        text-shadow: 0 0 4px #1A97D7;
+      }
+    }
+
+  }
+
+  .footer__icons a {
+
+    z-index: 1;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0 4px;
+    font-size: 20px;
+    color: #5F6368;
+    transition: all 0.5s ease-in-out;
+    &:hover{
+      color: #C9171F;
+    }
+
+  }
+}

@@ -1,14 +1,151 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./static/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./static/favicon.ico" type="image/x-icon">
+
     <title>Тематический словарь</title>
 </head>
 <body>
     <div id="app">
-    </div>
+       <header>
+           <div class="container">
+               <div class="row">
+                       <div class="col-lg-9 col-md-7 col-8">
+                           <div class="header__logo">
+                               <img src="./static/img/logo.png" alt='logo Dictionary, 3000 words'>
+                           </div>
+
+                       </div>
+                       <div class="col-lg-3 col-md-5 col-4 header__nav">
+                           <ul>
+                               <li>Words</li>
+                               <li>About</li>
+                           </ul>
+                       </div>
+               </div>
+          </div>
+       </header>
+        <section class="content">
+            <div class="container">
+<!--                input + previous attempts-->
+                <div class="row">
+                    <div class="col-lg-6 col-md-7 col-12 order-md-1 order-2 mb-20">
+                        <div class="content__input">
+                            <div class="word">advanced <span>[ədˈvɑːnst]</span></div>
+                            <form class="input-form">
+                                <p>Enter translation:</p>
+                                <input type="text" title="Enter translate">
+                                <button class="button-done">Done</button>
+                                <button class="button-reset">Reset</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-5 col-12 order-md-2 order-1">
+                        <div class="content__previous table-view">
+                            <div class="row-table">
+                                <div class="cell cell-title">Date</div>
+                                <div class="cell cell-title">Curently</div>
+                            </div>
+                            <div class="row-table">
+                                <div class="cell-data">20/06/2021 20:08</div>
+                                <div class="cell-data">
+                                    <span>14/31 - </span>38%
+                                    <i class="far fa-eye"></i>
+                                </div>
+                            </div>
+                            <div class="row-table">
+                                <div class="cell-data">20/06/2021 20:08</div>
+                                <div class="cell-data">
+                                    <span>14/31 - </span>38%
+                                    <i class="far fa-eye"></i>
+                                </div>
+                            </div>
+                            <div class="row-table">
+                                <div class="cell-data">20/06/2021 20:08</div>
+                                <div class="cell-data">
+                                    <span>14/31 - </span>38%
+                                    <i class="far fa-eye"></i>
+                                </div>
+                            </div>
+                            <div class="row-table">
+                                <div class="cell-data">20/06/2021 20:08</div>
+                                <div class="cell-data">
+                                    <span>14/31 - </span>38%
+                                    <i class="far fa-eye"></i>
+                                </div>
+                            </div>
+                            <div class="row-table">
+                                <div class="cell-data">20/06/2021 20:08</div>
+                                <div class="cell-data">
+                                    <span>14/31 - </span>38%
+                                    <i class="far fa-eye"></i>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+<!--                content-->
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-12">
+                        <div class="content__table table-view ">
+                            <div class="row-table">
+                                <div class="cell cell-title">Words</div>
+                                <div class="cell cell-title">Translate</div>
+                            </div>
+                            <div class="row-table">
+                                <div class="cell-data">
+                                    <i class="far fa-times-circle"></i>
+                                    <p>advanced <i>[ədˈvɑːnst]</i></p>
+                                </div>
+                                <div class="cell-data ">..... Прил. продвинутый (расширенный) ..... Прил. продвинутый (расширенный)..... Прил. продвинутый (расширенный)..... Прил. продвинутый (расширенный)..... Прил. продвинутый (расширенный)..... Прил. продвинутый (расширенный)</div>
+                            </div>
+                            <div class="row-table">
+                                <div class="cell-data">
+                                    <i class="far fa-check-circle"></i>
+                                    <p>advanced <i>[ədˈvɑːnst]</i></p>
+                                </div>
+                                <div class="cell-data">..... Прил. продвинутый (расширенный) ..... </div>
+                            </div>
+                            <div class="row-table">
+                                <div class="cell-data">
+                                    <i class="far fa-check-circle"></i>
+                                    <p>aed <i>[nst]</i></p>
+                                </div>
+                                <div class="cell-data">..... Прил. продвинутый (расширенный) ..... </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="popup">
+            <div class="popup_modal">
+                <img src="./static/img/logo.png" alt='logo Dictionary, 3000 words'>
+                <p>Приветствую всех читателей. <br>
+                    Данное Single page application создано исключительно с целью практики своих знаний английского словаря. Словарь из 3000 самых “ходовых” слов.
+                    <br>Приложение имеет
+                    <a href="https://github.com/Chikistq/dictionary-v.2">открытый исходный код</a>. </p>
+
+            </div>
+        </div>
+        <footer>
+            <p>FedorovKN
+                <a rel="stylesheet" href="mailto:fedorovkn@uidevelop.ru">fedorovkn@uidevelop.ru</a>
+            </p>
+            <div class="footer__icons">
+                <a href="/"><i class="fab fa-github"></i></a>
+                <a href="/"><i class="fab fa-instagram"></i></a>
+                <a href="/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </footer>
+   </div>
+
 </body>
 </html>

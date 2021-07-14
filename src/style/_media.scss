@@ -1,0 +1,106 @@
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+  .content__input .input-form input{
+    width: 110px;
+  }
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  body {
+    background-position: 115% 0, 20% 200px, 40% 100% !important;
+    .content {
+      padding-top: 30px;
+    }
+
+  }
+  .content .content__previous {
+    height: 150px;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  .content .content__table {
+    font-size: 14px;
+  }
+
+  .content__input .input-form p {
+    font-size: 14px;
+  }
+
+  .content__input .input-form input{
+    width: 100%;
+  }
+  .table-view .row-table span {
+    display: none;
+  }
+
+
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  body {
+    background-position: 100px 0, 20% 200px, 40% 100% !important;
+  }
+
+  body .header__nav ul {
+    white-space: inherit;
+    margin: 20px 20px;
+    li:last-child {
+      padding: 10px 0;
+    }
+  }
+  body * {
+    font-size: 14px;
+  }
+  .content  .content__previous {
+    margin-bottom: 0;
+  }
+  .content .content__input {
+    height: 100%;
+    align-items: flex-start;
+  }
+  .content .content__input .word {
+    font-size: 18px;
+    margin-bottom: 15px;
+    align-self: center;
+  }
+  .content .content__input p {
+    display: none;
+  }
+  .table-view .row-table span {
+    display: inherit;
+
+  }
+
+  .popup_modal {
+    width: 500px !important;
+  }
+}
+
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 540px) {
+  body .header__logo {
+    height: 80px;
+  }
+  .popup_modal {
+    width: 300px !important;
+    img {
+      height: 50px !important;
+    }
+  }
+
+  .table-view * {
+    font-size: 12px;
+  }
+  .content__table .row-table .cell-data {
+    min-width: 120px;
+  }
+}

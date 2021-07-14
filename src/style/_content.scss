@@ -1,0 +1,208 @@
+@import "vars";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
+.content{
+  padding-top: 50px;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: #141414;
+  position: relative;
+  margin-bottom: 25px;
+
+
+  .word {
+    font-weight: 500;
+    font-size: 18px;
+    margin-left: 10px;
+    span {
+      font-weight: 400;
+      color: $prim-color;
+    }
+  }
+}
+
+.content__input {
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: space-evenly;
+  padding: 30px 0;
+}
+
+.input-form {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+
+  p {
+    white-space: nowrap;
+  }
+
+  input {
+    margin: 0 5px;
+    width: 100%;
+  }
+  button {
+    margin: 0 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding: 3px 16px;
+    border: none;
+    background: #FFFFFF;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    min-width: 70px;
+
+  }
+  .button-done {
+    background: $prim-color;
+    color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    &:hover, &:focus {
+      background-color: lighten($prim-color, 10%);
+      cursor: pointer;
+
+    }
+    &:active {
+      background-color: darken($prim-color, 10%);
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: -13px;
+      left: 0;
+      width: 100px;
+      height: 30px;
+      transform: rotate(35deg);
+      background: linear-gradient(0deg, rgb(255 255 255 / 7%), rgb(255 255 255 / 21%)), rgb(255 255 255 / 20%);
+      z-index: 1;
+      opacity: .3;
+      border-radius: 0 100% 48% 52% / 47% 53% 47% 53% ;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: 28px;
+      width: 100px;
+      height: 30px;
+      transform: rotate(22deg);
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.21), rgba(255, 255, 255, 0.21));
+      z-index: 2;
+      opacity: 0.3;
+      border-radius: 2% 123% 63% 117%/53% 53% 78% 53%;
+    }
+
+  }
+
+  .button-reset {
+    &:hover, &:focus {
+      background-color: lighten(rgba($second-color, .2), 5%);
+      cursor: pointer;
+
+    }
+    &:active {
+      background-color: darken(rgba($second-color, .4), 10%);
+    }
+  }
+}
+
+//table stack
+.content__previous {
+  height: 160px;
+}
+.content__table {
+  height: 500px;
+}
+.table-view {
+  position: relative;
+  width: 100%;
+  background: #FDFDFD;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 10px;
+  overflow-x: hidden;
+  overflow-scrolling: auto;
+  .cell-title {
+    font-weight: 400;
+  }
+  .row-table {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    transition: all 0.3s ease-in-out;
+    .cell-data {
+      display: inherit;
+      align-items: center;
+    }
+
+    .fa-w-18 {
+      color: #5F6368;
+      margin: -2px 0 0 10px;
+      &:hover{
+        color: #C9171F;
+      }
+    }
+
+  }
+  .row-table:first-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+//content
+.content__table {
+  .cell-title{
+    text-align: center;
+  }
+  .row-table:first-child {
+    font-weight: 400;
+    .cell-title:first-child {
+      flex-basis: 30%;
+    }
+    .cell-title:last-child {
+      flex-basis: 70%;
+    }
+  }
+  .row-table {
+    justify-content: flex-start;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 5px;
+    .cell-data {
+      display: inherit;
+      align-items: center;
+      &:first-child {
+        flex-basis: 30%;
+      }
+      &:last-child {
+        flex-basis: 70%;
+      }
+
+
+      p {
+        margin: 0 10px 0 15px;
+        i {
+          white-space: nowrap;
+        }
+      }
+    }
+    .fa-w-16f {
+      margin-left: 5px;
+    }
+    .fa-times-circle {
+      color: $second-color;
+    }
+    .fa-check-circle {
+      color: #B0C917;
+    }
+
+  }
+}

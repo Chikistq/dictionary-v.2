@@ -24,11 +24,7 @@
     "url": "https://github.com/Chikistq/dictionary-v.2/issues"
   },
   "homepage": "https://github.com/Chikistq/dictionary-v.2#readme",
-  "browserslist": [
-    "defaults",
-    "not IE 11",
-    "maintained node versions"
-  ],
+  "browserslist": "> 0.25%, not dead",
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",

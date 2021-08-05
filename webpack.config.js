@@ -52,7 +52,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
+      {
+        test: /\.(sa|sc|c)ss$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -85,10 +89,6 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
-      },
-      {
-        test: /\.html$/i,
-        loader: 'html-loader',
       },
     ]
   }
